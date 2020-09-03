@@ -79,5 +79,9 @@
     "*.js": "eslint --fix",
     "*.hbs": "ember-template-lint --fix",
     "*.{html,json,md,yml}": "prettier --write"
+  },
+  "volta": {
+    "node": "12.18.3",
+    "yarn": "1.22.5"
   }
 }
