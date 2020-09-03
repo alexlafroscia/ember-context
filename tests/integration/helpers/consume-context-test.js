@@ -3,7 +3,7 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render, settled } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Helpers | context-consumer', function (hooks) {
+module('Integration | Helpers | consume-context', function (hooks) {
   setupRenderingTest(hooks);
 
   test('consumer pulls value from provider by key', async function (assert) {
@@ -11,7 +11,7 @@ module('Integration | Helpers | context-consumer', function (hooks) {
 
     await render(hbs`
       <ContextProvider @key="key" @value={{value}}>
-        {{context-consumer "key"}}
+        {{consume-context "key"}}
       </ContextProvider>
     `);
 
@@ -31,10 +31,10 @@ module('Integration | Helpers | context-consumer', function (hooks) {
       <ContextProvider @key="key-1" @value={{value1}}>
         <ContextProvider @key="key-2" @value={{value2}}>
           <div data-test-value-1>
-            {{context-consumer "key-1"}}
+            {{consume-context "key-1"}}
           </div>
           <div data-test-value-2>
-            {{context-consumer "key-2"}}
+            {{consume-context "key-2"}}
           </div>
         </ContextProvider>
       </ContextProvider>
@@ -58,13 +58,13 @@ module('Integration | Helpers | context-consumer', function (hooks) {
     await render(hbs`
       <ContextProvider @key="key" @value={{first}}>
         <div data-test-first>
-          {{context-consumer "key"}}
+          {{consume-context "key"}}
         </div>
       </ContextProvider>
 
       <ContextProvider @key="key" @value={{second}}>
         <div data-test-second>
-          {{context-consumer "key"}}
+          {{consume-context "key"}}
         </div>
       </ContextProvider>
     `);

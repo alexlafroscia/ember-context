@@ -30,14 +30,14 @@ This "Provider" is always an instance of the `ContextProvider` component, which 
 </ContextProvider>
 ```
 
-A "Consumer" can be either a usage of the `context-consumer` helper _or_ a component that injects the value as a property.
+A "Consumer" can be either a usage of the `consume-context` helper _or_ a component that injects the value as a property.
 
-### `context-consumer`
+### `consume-context`
 
-The most basic -- and recommended -- usage is to consume a value using the `context-consumer` helper. Using it might look like this:
+The most basic -- and recommended -- usage is to consume a value using the `consume-context` helper. Using it might look like this:
 
 ```handlebars
-{{context-consumer "shared-key"}}
+{{consume-context "shared-key"}}
 ```
 
 If placed beneath the `ContextProvider` in the example above, the helper will return `valueForSharedKey`. The beauty of this addon is that the helper can be _anywhere_ in your template, as long as there is a `ContextProvider` with a key of `shared-key` somewhere above it, even across component boundaries.
@@ -56,7 +56,7 @@ export default class MyComponent extends Component {
 }
 ```
 
-Similar to the `context-consumer` helper, if `MyComponent` is rendered somewhere within `ContextProvider` with a `@key` of `shared-key`, the value of the `sharedKeyValue` on `MyComponent` will be `valueForSharedKey`. This allows you to avoid using the helper if it is not appropriate for your use-case.
+Similar to the `consume-context` helper, if `MyComponent` is rendered somewhere within `ContextProvider` with a `@key` of `shared-key`, the value of the `sharedKeyValue` on `MyComponent` will be `valueForSharedKey`. This allows you to avoid using the helper if it is not appropriate for your use-case.
 
 ## Contributing
 
