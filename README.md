@@ -1,6 +1,6 @@
 # @alexlafroscia/ember-context
 
-[Short description of the addon.]
+Consume values from elsewhere in your Ember application, without directly passing them
 
 ## Compatibility
 
@@ -16,7 +16,47 @@ ember install @alexlafroscia/ember-context
 
 ## Usage
 
-[Longer description of how to use the addon in apps.]
+Ember Services are excellent for sharing global state across your application. However, there are many times where some state needs to be shared _without_ it being considered global; it should be shared within a sub-tree of your application but thrown away once that sub-tree is no longer rendered.
+
+To fill this gap, enter `ember-context`!
+
+This addon is based on two related roles for a given value; a "Provider" and a "Consumer".
+
+This "Provider" is always an instance of the `ContextProvider` component, which can be used like so:
+
+```handlebars
+<ContextProvider @key="shared-key" @value={{valueForSharedKey}}>
+  {{! Consumer somewhere in here }}
+</ContextProvider>
+```
+
+A "Consumer" can be either a usage of the `context-consumer` helper _or_ a component that injects the value as a property.
+
+### `context-consumer`
+
+The most basic -- and recommended -- usage is to consume a value using the `context-consumer` helper. Using it might look like this:
+
+```handlebars
+{{context-consumer "shared-key"}}
+```
+
+If placed beneath the `ContextProvider` in the example above, the helper will return `valueForSharedKey`. The beauty of this addon is that the helper can be _anywhere_ in your template, as long as there is a `ContextProvider` with a key of `shared-key` somewhere above it, even across component boundaries.
+
+### `inject` Decorator
+
+Additionally, for an experience closer to that of working with Ember services, you can add the `inject` decorator to your own components to consume a contextual value.
+
+```javascript
+// app/components/my-component.js
+import Component from '@glimmer/component';
+import { inject as context } from '@alexlafroscia/ember-context';
+
+export default class MyComponent extends Component {
+  @context('shared-key') sharedKeyValue;
+}
+```
+
+Similar to the `context-consumer` helper, if `MyComponent` is rendered somewhere within `ContextProvider` with a `@key` of `shared-key`, the value of the `sharedKeyValue` on `MyComponent` will be `valueForSharedKey`. This allows you to avoid using the helper if it is not appropriate for your use-case.
 
 ## Contributing
 
