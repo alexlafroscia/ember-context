@@ -1,4 +1,4 @@
-# @movable/ember-context
+# @alexlafroscia/ember-context
 
 [Short description of the addon.]
 
@@ -11,7 +11,7 @@
 ## Installation
 
 ```
-ember install @movable/ember-context
+ember install @alexlafroscia/ember-context
 ```
 
 ## Usage

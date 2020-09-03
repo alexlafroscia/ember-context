@@ -3,7 +3,7 @@
 ## Installation
 
 - `git clone <repository-url>`
-- `cd @movable/ember-context`
+- `cd @alexlafroscia/ember-context`
 - `yarn install`
 
 ## Linting

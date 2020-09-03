@@ -1,1 +1,1 @@
-export { default, contextConsumer } from '@movable/ember-context/helpers/context-consumer';
+export { default, contextConsumer } from '@alexlafroscia/ember-context/helpers/context-consumer';
