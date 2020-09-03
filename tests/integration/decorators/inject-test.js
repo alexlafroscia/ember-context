@@ -22,4 +22,32 @@ module('Integration | Decorators | inject', function (hooks) {
 
     assert.dom().hasText('2', 'Consumer emits new value when Provider is updated');
   });
+
+  test('can handle adjacent instances of a provider with the same key', async function (assert) {
+    this.set('first', 'a');
+    this.set('second', 'b');
+
+    await render(hbs`
+      <ContextProvider @key="key" @value={{first}}>
+        <div data-test-first>
+          <ConsumeKey />
+        </div>
+      </ContextProvider>
+
+      <ContextProvider @key="key" @value={{second}}>
+        <div data-test-second>
+          <ConsumeKey />
+        </div>
+      </ContextProvider>
+    `);
+
+    assert.dom('[data-test-first]').hasText('a');
+    assert.dom('[data-test-second]').hasText('b');
+
+    this.set('first', 'c');
+    await settled();
+
+    assert.dom('[data-test-first]').hasText('c', 'First instance reads new value');
+    assert.dom('[data-test-second]').hasText('b', 'Second instance still reads original value');
+  });
 });

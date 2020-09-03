@@ -29,8 +29,13 @@ export default class ContextComponentManager {
     component.value = value;
   }
 
-  destroyComponent(/* component */) {
-    // Nothing to clean up
+  destroyComponent(component) {
+    const { key } = component;
+
+    // Delete the entry from the map if the component is within it
+    if (LATEST_INSTANCE_MAP.get(key) === component) {
+      LATEST_INSTANCE_MAP.delete(key);
+    }
   }
 
   getContext(/* component */) {

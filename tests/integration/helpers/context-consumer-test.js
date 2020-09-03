@@ -52,16 +52,30 @@ module('Integration | Helpers | context-consumer', function (hooks) {
   });
 
   test('can handle adjacent instances of a provider with the same key', async function (assert) {
+    this.set('first', 'a');
+    this.set('second', 'b');
+
     await render(hbs`
-      <ContextProvider @key="key" @value="1">
-        {{context-consumer "key"}}
+      <ContextProvider @key="key" @value={{first}}>
+        <div data-test-first>
+          {{context-consumer "key"}}
+        </div>
       </ContextProvider>
 
-      <ContextProvider @key="key" @value="2">
-        {{context-consumer "key"}}
+      <ContextProvider @key="key" @value={{second}}>
+        <div data-test-second>
+          {{context-consumer "key"}}
+        </div>
       </ContextProvider>
     `);
 
-    assert.dom().hasText('1 2', 'Both context consumer/provider pairs work');
+    assert.dom('[data-test-first]').hasText('a');
+    assert.dom('[data-test-second]').hasText('b');
+
+    this.set('first', 'c');
+    await settled();
+
+    assert.dom('[data-test-first]').hasText('c', 'First instance reads new value');
+    assert.dom('[data-test-second]').hasText('b', 'Second instance still reads original value');
   });
 });
