@@ -62,6 +62,11 @@ Similar to the `consume-context` helper, if `MyComponent` is rendered somewhere 
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
+## Prior Art
+
+- [`ember-provider`](https://github.com/alexlafroscia/ember-provider): My first attempt at scoping state to a sub-tree of an application. It relied on actually walking up the component tree which, while more reliable, it not really possible with public Ember APIs. `ember-context` does not use any private APIs.
+- [React Context](https://reactjs.org/docs/context.html): The original inspiration for the ability to set a value in one place in the tree and receive it elsewhere.
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE.md).
