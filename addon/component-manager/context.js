@@ -1,5 +1,6 @@
 import { getOwner, setOwner } from '@ember/application';
 import { capabilities } from '@ember/component';
+import { assert } from '@ember/debug';
 
 export const LATEST_INSTANCE_MAP = new Map();
 
@@ -23,15 +24,9 @@ export default class ContextComponentManager {
   }
 
   updateComponent(component, { named: { key, value } }) {
-    // Update `key` if it changed
-    if (component.key !== key) {
-      component.key = key;
-    }
+    assert('`key` argument for ContextProvider cannot change', component.key === key);
 
-    // Update `value` if it changed
-    if (component.value !== value) {
-      component.value = value;
-    }
+    component.value = value;
   }
 
   destroyComponent(/* component */) {
