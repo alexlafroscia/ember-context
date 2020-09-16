@@ -1080,13 +1080,13 @@
   resolved "https://registry.yarnpkg.com/@glimmer/validator/-/validator-0.44.0.tgz#03d127097dc9cb23052cdb7fcae59d0a9dca53e1"
   integrity sha512-i01plR0EgFVz69GDrEuFgq1NheIjZcyTy3c7q+w7d096ddPVeVcRzU3LKaqCfovvLJ+6lJx40j45ecycASUUyw==
 
-"@movable/eslint-config-ember@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@movable/eslint-config-ember/-/eslint-config-ember-0.6.0.tgz#ce44f3fe1a46d2aa6344ef482e4479457497d6bb"
-  integrity sha512-OQp8VvNXhHnbFCyWrlzheL6XO7rNcejWc/Azd0jbehwmXQ8Eyv3XY9WUSEiiz5J3ffd92X8qL1c5Dt8/XLWRtQ==
+"@movable/eslint-config-ember@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@movable/eslint-config-ember/-/eslint-config-ember-0.6.1.tgz#37a75989f61ac872d4365b341e0cc655971b72cc"
+  integrity sha512-EWUTv4Axf4OFW9d0NB8ndNd0y6sFdliyG2XzfvzFtQgoAERNu3cGahO/HaiRGT7J3TwkhSL8roU4gqZd0acEWg==
   dependencies:
     eslint-plugin-ember "^7.11.0"
-    eslint-plugin-qunit "^4.3.0"
+    eslint-plugin-qunit "^5.0.0"
 
 "@movable/eslint-config@^0.6.7":
   version "0.6.7"
@@ -5192,10 +5192,10 @@ eslint-plugin-prettier@^3.1.4:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-qunit@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-qunit/-/eslint-plugin-qunit-4.3.0.tgz#a7465cd3947bfb9abdf7d7da93e77d2c7c68bee8"
-  integrity sha512-xyQtwoDHWDuIqH5cp8SV0N++gFGwxfMKwRyumsBnJ3INM6Mz/qWUhrCTastOvvAc98aoieu2X5Ht4LgaZ3a75Q==
+eslint-plugin-qunit@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-qunit/-/eslint-plugin-qunit-5.0.0.tgz#2f33707b97f7b0a338c16378794e325550a1431b"
+  integrity sha512-F1AuwxsJ4YgSQztd3OZCNtM3DXpiDF9bpXbVCBcBU+8l5WOAAxfJHNYqP3tOhEEbIJPRkcTgk0SAJPYtdVjBmQ==
 
 eslint-scope@^4.0.0:
   version "4.0.3"
