@@ -1088,15 +1088,15 @@
     eslint-plugin-ember "^7.11.0"
     eslint-plugin-qunit "^4.3.0"
 
-"@movable/eslint-config@^0.6.6":
-  version "0.6.6"
-  resolved "https://registry.yarnpkg.com/@movable/eslint-config/-/eslint-config-0.6.6.tgz#ded335a72df4293a2af9a11372d1519560503a06"
-  integrity sha512-qhoFcyGKrRMkZD/9+C843NUWd0eEVseWRw9Wnz+cXD19nYU4vBVNZGHUhSSQp9jyXUvvVuoUdn2lt2D1e8F2rQ==
+"@movable/eslint-config@^0.6.7":
+  version "0.6.7"
+  resolved "https://registry.yarnpkg.com/@movable/eslint-config/-/eslint-config-0.6.7.tgz#664d38358175187bd0add43938ecb802b3a43cf6"
+  integrity sha512-TllMgEElKUxgwDrKLklfKz84kvfXAntw9cvMiW8EQ5VO827LP6vFAIXSJcmDXvzg5fRdl2uNxLjSgA6L996LcQ==
   dependencies:
     "@movable/eslint-plugin-no-wildcard-postmessage" "^1.0.0"
-    "@movable/prettier-config" "^0.3.3"
+    "@movable/prettier-config" "^0.3.4"
     babel-eslint "^10.1.0"
-    eslint "^7.7.0"
+    eslint "^7.9.0"
     eslint-config-prettier "^6.11.0"
     eslint-plugin-no-unsanitized "^3.1.2"
     eslint-plugin-prettier "^3.1.4"
@@ -1106,12 +1106,12 @@
   resolved "https://registry.yarnpkg.com/@movable/eslint-plugin-no-wildcard-postmessage/-/eslint-plugin-no-wildcard-postmessage-1.0.0.tgz#528bea91b3097a374b462ea674bae52aa3075c34"
   integrity sha512-hs3DbWwouTYDZWcNy4wd+BIUPFYXhI8vnY3sP5ZbXvxooZzNM5BemrJz08HKI25STqHJC0U3oOIVoolQyfK+mQ==
 
-"@movable/prettier-config@^0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@movable/prettier-config/-/prettier-config-0.3.3.tgz#cac829c6f414c97e72536a1d6d291dea2089f620"
-  integrity sha512-wtexVZAMZHA4NjHlJIC6EtQIaDUkaCt0m0OrwYf+2H3t871izn3i9M6B6kyqhF65e63g9e18HpN4U1m5vFIt4g==
+"@movable/prettier-config@^0.3.3", "@movable/prettier-config@^0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@movable/prettier-config/-/prettier-config-0.3.4.tgz#d7a094336bd4cc1787844ac30b61fe1a83b68370"
+  integrity sha512-LYWJq9LuFKP9Jpr6Lx900YSMaUQFNJBBaLdM0rjQNHDxOL36OKBdh/c7+Df8rzn79P+Os6BC+N29is6B0dkoMQ==
   dependencies:
-    prettier "^2.1.0"
+    prettier "^2.1.1"
 
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
@@ -5225,7 +5225,7 @@ eslint-visitor-keys@^1.0.0, eslint-visitor-keys@^1.1.0, eslint-visitor-keys@^1.3
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.3.0.tgz#30ebd1ef7c2fdff01c3a4f151044af25fab0523e"
   integrity sha512-6J72N8UNa462wa/KFODt/PJ3IU60SDpC3QXC1Hjc1BXXpfL2C9R5+AU7jhe0F6GREqVMh4Juu+NY7xn+6dipUQ==
 
-eslint@^7.7.0, eslint@^7.9.0:
+eslint@^7.9.0:
   version "7.9.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.9.0.tgz#522aeccc5c3a19017cf0cb46ebfd660a79acf337"
   integrity sha512-V6QyhX21+uXp4T+3nrNfI3hQNBDa/P8ga7LoQOenwrlEFXrEnUEE+ok1dMtaS3b6rmLXhT1TkTIsG75HMLbknA==
@@ -8914,10 +8914,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^2.1.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.1.tgz#d9485dd5e499daa6cb547023b87a6cf51bee37d6"
-  integrity sha512-9bY+5ZWCfqj3ghYBLxApy2zf6m+NJo5GzmLTpr9FsApsfjriNnS2dahWReHMi7qNPhhHl9SYHJs2cHZLgexNIw==
+prettier@^2.1.1:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.1.2.tgz#3050700dae2e4c8b67c4c3f666cdb8af405e1ce5"
+  integrity sha512-16c7K+x4qVlJg9rEbXl7HEGmQyZlG4R9AgP+oHKRMsMsuk8s+ATStlf1NpDqyBI1HpVyfjLOeMhH2LvuNvV5Vg==
 
 printf@^0.5.1:
   version "0.5.3"
