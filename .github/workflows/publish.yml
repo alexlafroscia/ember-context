@@ -1,0 +1,17 @@
+name: Publish Package
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  github:
+    name: Publish to GitHub Package Registry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          registry: https://npm.pkg.github.com/
+          token: ${{ secrets.GITHUB_TOKEN }}
