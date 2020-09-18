@@ -58,6 +58,14 @@ export default class MyComponent extends Component {
 
 Similar to the `consume-context` helper, if `MyComponent` is rendered somewhere within `ContextProvider` with a `@key` of `shared-key`, the value of the `sharedKeyValue` on `MyComponent` will be `valueForSharedKey`. This allows you to avoid using the helper if it is not appropriate for your use-case.
 
+## Caveats
+
+There are some potential issues around looking up the correct `ContextProvider` in certain circumstances that you should be aware of. Specifically, problems can arise if you use the same "key" for multiple providers and consume the value for that key within a conditional.
+
+For your own safety, I recommend not rendering multiple providers for the same "key" simultaneously; if you can avoid that, things should work out okay!
+
+If you do run into problems, please open an issue!.
+
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
