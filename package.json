@@ -5,7 +5,7 @@
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "git://github.com/alexlafroscia/ember-context.git",
   "license": "MIT",
   "author": "",
   "directories": {

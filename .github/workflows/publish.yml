@@ -1,17 +1,23 @@
 name: Publish Package
 
 on:
+  workflow_dispatch:
   release:
-    types: [published]
+    types:
+      - created
 
 jobs:
   github:
-    name: Publish to GitHub Package Registry
+    name: GitHub Package Registry
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - uses: volta-cli/action@v1
+      - name: Set Registry
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > .npmrc
+          echo "registry=https://npm.pkg.github.com/alexlafroscia" >> .npmrc
       - name: Publish
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          registry: https://npm.pkg.github.com/
-          token: ${{ secrets.GITHUB_TOKEN }}
+        run: npm publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
