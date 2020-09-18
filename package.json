@@ -1,7 +1,7 @@
 {
   "name": "@alexlafroscia/ember-context",
   "version": "1.0.0-0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Consume values from elsewhere in your Ember application",
   "keywords": [
     "ember-addon"
   ],

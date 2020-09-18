@@ -1,6 +1,6 @@
 # @alexlafroscia/ember-context
 
-Consume values from elsewhere in your Ember application, without directly passing them
+Consume values from elsewhere in your Ember application
 
 ## Compatibility
 
