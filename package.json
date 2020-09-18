@@ -82,6 +82,11 @@
     "*.hbs": "ember-template-lint --fix",
     "*.{html,json,md,yml}": "prettier --write"
   },
+  "standard-version": {
+    "scripts": {
+      "postchangelog": "prettier --write CHANGELOG.md"
+    }
+  },
   "volta": {
     "node": "12.18.3",
     "yarn": "1.22.5"
