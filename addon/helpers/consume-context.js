@@ -5,6 +5,6 @@ export default class ContextConsumerHelper extends Helper {
   compute([key], { fallback }) {
     const provider = getProviderFor(this, key, fallback);
 
-    return (provider && provider.value) || fallback;
+    return provider ? provider.value : fallback;
   }
 }
