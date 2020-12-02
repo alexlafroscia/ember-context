@@ -54,7 +54,7 @@
     "ember-template-lint-plugin-prettier": "^2.0.0",
     "ember-try": "^1.4.0",
     "eslint": "^7.9.0",
-    "eslint-plugin-ember": "^9.0.0",
+    "eslint-plugin-ember": "^10.0.0",
     "eslint-plugin-node": "^11.1.0",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
