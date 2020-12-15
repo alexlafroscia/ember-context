@@ -23,6 +23,15 @@ module('Integration | Decorators | inject', function (hooks) {
     assert.dom().hasText('2', 'Consumer emits new value when Provider is updated');
   });
 
+  test('can inject a fallback value from a consumer', async function (assert) {
+    await render(hbs`
+      <ConsumeKey />
+    `);
+
+    // `fallback-value` is the fallback value set in the `consume-key` component for these tests
+    assert.dom().hasText('fallback-value', 'Consumer retrieved the value from the Provider');
+  });
+
   test('can handle adjacent instances of a provider with the same key', async function (assert) {
     this.set('first', 'a');
     this.set('second', 'b');

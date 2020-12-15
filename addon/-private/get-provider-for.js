@@ -3,13 +3,16 @@ import { LATEST_INSTANCE_MAP } from '../component-manager/context';
 
 const CONSUMER_TO_PROVIDER_MAP = new WeakMap();
 
-export function getProviderFor(object, key) {
+export function getProviderFor(object, key, fallback) {
   let provider;
 
   // Set up an object -> key -> provider relationship if it doesn't already exist
   if (!CONSUMER_TO_PROVIDER_MAP.get(object)?.get(key)) {
     provider = LATEST_INSTANCE_MAP.get(key);
-    assert(`A ContextProvider with key ${key} must be an ancestor`, provider);
+    assert(
+      `A ContextProvider with key ${key} must be an ancestor, or you must provide a fallback key`,
+      fallback || provider
+    );
 
     // Add a map for key -> provider for an object if we have not already
     if (!CONSUMER_TO_PROVIDER_MAP.has(object)) {

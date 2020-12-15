@@ -78,4 +78,20 @@ module('Integration | Helpers | consume-context', function (hooks) {
     assert.dom('[data-test-first]').hasText('c', 'First instance reads new value');
     assert.dom('[data-test-second]').hasText('b', 'Second instance still reads original value');
   });
+
+  test('consumer returns fallback value when ContextProvider is not found', async function (assert) {
+    const fallbackValue = 'my-fallback';
+    this.set('fallbackValue', fallbackValue);
+
+    await render(hbs`
+      {{consume-context "key" fallback=fallbackValue}}
+    `);
+
+    assert
+      .dom()
+      .hasText(
+        fallbackValue,
+        'Consumer retrieved the fallback value from when Provider not present'
+      );
+  });
 });
