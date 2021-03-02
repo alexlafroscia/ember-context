@@ -1427,15 +1427,15 @@
     eslint-plugin-qunit "^5.3.0"
 
 "@movable/eslint-config@^0.6.7":
-  version "0.6.9"
-  resolved "https://registry.yarnpkg.com/@movable/eslint-config/-/eslint-config-0.6.9.tgz#cdead0da6cc6f7100f7943f115bd89a1e72ebcad"
-  integrity sha512-/dVPYOxtqdwf2xx5x2XOB1D8Q0ZXvd565KZ9o3xjcp8rULIpqfWSXi8hp+VfaUZNIgWCFiBMFRC461Dnlc5q6Q==
+  version "0.6.10"
+  resolved "https://registry.yarnpkg.com/@movable/eslint-config/-/eslint-config-0.6.10.tgz#1acece66f3c7bf485f6998df76fcda0860da80d0"
+  integrity sha512-BqkPZlBImtKhW+Ra00zm2rBZSKPosSzqA015sHZtPW6auGBHoe/l91Z2cnMK+t8bn1bmeIFA0RkpDb9etgyZaA==
   dependencies:
     "@movable/eslint-plugin-no-wildcard-postmessage" "^1.0.0"
     "@movable/prettier-config" "^0.3.6"
     babel-eslint "^10.1.0"
-    eslint "^7.18.0"
-    eslint-config-prettier "^7.2.0"
+    eslint "^7.21.0"
+    eslint-config-prettier "^8.1.0"
     eslint-plugin-no-unsanitized "^3.1.4"
     eslint-plugin-prettier "^3.3.1"
 
@@ -6184,10 +6184,10 @@ escodegen@^1.14.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-7.2.0.tgz#f4a4bd2832e810e8cc7c1411ec85b3e85c0c53f9"
-  integrity sha512-rV4Qu0C3nfJKPOAhFujFxB7RMP+URFyQqqOZW9DMRD7ZDTFyjaIlETU3xzHELt++4ugC0+Jm084HQYkkJe+Ivg==
+eslint-config-prettier@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.1.0.tgz#4ef1eaf97afe5176e6a75ddfb57c335121abc5a6"
+  integrity sha512-oKMhGv3ihGbCIimCAjqkdzx2Q+jthoqnXSP+d86M9tptwugycmTFdVR4IpLgq2c4SHifbwO90z2fQ8/Aio73yw==
 
 eslint-plugin-ember@^10.0.0:
   version "10.2.0"
@@ -6283,7 +6283,7 @@ eslint-visitor-keys@^2.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-2.0.0.tgz#21fdc8fbcd9c795cc0321f0563702095751511a8"
   integrity sha512-QudtT6av5WXels9WjIM7qz1XD1cWGvX4gGXvp/zBn9nXG02D0utdU3Em2m/QjTnrsk6bBjmCygl3rmj118msQQ==
 
-eslint@^7.18.0, eslint@^7.9.0:
+eslint@^7.21.0, eslint@^7.9.0:
   version "7.21.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.21.0.tgz#4ecd5b8c5b44f5dedc9b8a110b01bbfeb15d1c83"
   integrity sha512-W2aJbXpMNofUp0ztQaF40fveSsJBjlSCSWpy//gzfTvwC+USs/nceBrKmlJOiM8r1bLwP2EuYkCqArn/6QTIgg==
