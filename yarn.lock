@@ -1419,11 +1419,11 @@
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
 
 "@movable/eslint-config-ember@^0.6.1":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@movable/eslint-config-ember/-/eslint-config-ember-0.6.2.tgz#50de2380e6fb2a1974d628635300716495187c49"
-  integrity sha512-/F3norVeRoLZgq8sA4coz6np3rCMvsvxhT3WFckYm9z4pSNFRKKNsfhhwtkNsuIFNODmIu9jORoW0q7HRm1xyQ==
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/@movable/eslint-config-ember/-/eslint-config-ember-0.6.4.tgz#8533a513105798b343a2a735bc033dce04415e02"
+  integrity sha512-V8zDe6a19bY+PmTFTReJQ1vWUpz9w/BuFOpLv/1GJ4DPbGcdimLWqbRexJnJi3Ew4c1ORqdHRNSuMrSK1WU+2A==
   dependencies:
-    eslint-plugin-ember "^7.11.0"
+    eslint-plugin-ember "^10.2.0"
     eslint-plugin-qunit "^5.3.0"
 
 "@movable/eslint-config@^0.6.7":
@@ -5824,7 +5824,7 @@ ember-resolver@^8.0.2:
     ember-cli-version-checker "^5.1.1"
     resolve "^1.17.0"
 
-ember-rfc176-data@^0.3.12, ember-rfc176-data@^0.3.13, ember-rfc176-data@^0.3.15, ember-rfc176-data@^0.3.16:
+ember-rfc176-data@^0.3.13, ember-rfc176-data@^0.3.15, ember-rfc176-data@^0.3.16:
   version "0.3.16"
   resolved "https://registry.yarnpkg.com/ember-rfc176-data/-/ember-rfc176-data-0.3.16.tgz#2ace0ac9cf9016d493a74a1d931643a308679803"
   integrity sha512-IYAzffS90r2ybAcx8c2qprYfkxa70G+/UPkxMN1hw55DU5S2aLOX6v3umKDZItoRhrvZMCnzwsdfKSrKdC9Wbg==
@@ -6189,7 +6189,7 @@ eslint-config-prettier@^8.1.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.1.0.tgz#4ef1eaf97afe5176e6a75ddfb57c335121abc5a6"
   integrity sha512-oKMhGv3ihGbCIimCAjqkdzx2Q+jthoqnXSP+d86M9tptwugycmTFdVR4IpLgq2c4SHifbwO90z2fQ8/Aio73yw==
 
-eslint-plugin-ember@^10.0.0:
+eslint-plugin-ember@^10.0.0, eslint-plugin-ember@^10.2.0:
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-10.2.0.tgz#449c3ce8e5421c61ab47e0cb6954e2f6f1cfbdc8"
   integrity sha512-W5cPJa+bBcKJ5kmmu7o8r1hbbT45ZCy8eE5EyRjqJ02B7Jlg74mX+Hdz4RYNSvV1+G7YAOwEZLUkIdJ+44ySGA==
@@ -6199,15 +6199,6 @@ eslint-plugin-ember@^10.0.0:
     ember-rfc176-data "^0.3.15"
     eslint-utils "^2.1.0"
     lodash.kebabcase "^4.1.1"
-    snake-case "^3.0.3"
-
-eslint-plugin-ember@^7.11.0:
-  version "7.13.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-7.13.0.tgz#a1df7794f06cdc6e1b8acfe6c59db5cf861f53dc"
-  integrity sha512-qIbw4uP0qUJoiWF4+7MTJWqwEN86RGmBNId0cwSoHoVNWtcw50R1ajYgxM1Q5FVUdoisVeSl9lKVRh5zkDFl+g==
-  dependencies:
-    "@ember-data/rfc395-data" "^0.0.4"
-    ember-rfc176-data "^0.3.12"
     snake-case "^3.0.3"
 
 eslint-plugin-es@^3.0.0:
