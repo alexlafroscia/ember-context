@@ -34,7 +34,7 @@
     "@ember/optional-features": "^2.0.0",
     "@glimmer/component": "^1.0.1",
     "@movable/eslint-config": "^0.6.7",
-    "@movable/eslint-config-ember": "^0.6.1",
+    "@movable/eslint-config-ember": "^1.0.0",
     "@movable/prettier-config": "^0.3.3",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
