@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
+    "@embroider/test-setup": "^0.43.2",
     "@glimmer/component": "^1.0.1",
     "@movable/eslint-config": "^0.6.7",
     "@movable/eslint-config-ember": "^0.6.1",

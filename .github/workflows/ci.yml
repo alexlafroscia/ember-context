@@ -48,7 +48,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ember-try-scenario: [ember-lts-3.16, ember-lts-3.20, ember-beta, embroider]
+        ember-try-scenario:
+          [ember-lts-3.16, ember-lts-3.20, ember-beta, embroider-safe, embroider-optimized]
     steps:
       - uses: actions/checkout@v1
       - uses: volta-cli/action@v1
