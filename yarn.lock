@@ -1606,13 +1606,13 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.0.tgz#87de7af9c231826fdd68ac7258f77c429e0e5fcf"
   integrity sha512-wdppn25U8z/2yiaT6YGquE6X8sSv7hNMWSXYSSU1jGv/yd6XqjXgTDJ8KP4NgjTXfJ3GbRjeeb8RTV7a/VpM+w==
 
-"@movable/eslint-config-ember@^0.6.1":
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/@movable/eslint-config-ember/-/eslint-config-ember-0.6.4.tgz#8533a513105798b343a2a735bc033dce04415e02"
-  integrity sha512-V8zDe6a19bY+PmTFTReJQ1vWUpz9w/BuFOpLv/1GJ4DPbGcdimLWqbRexJnJi3Ew4c1ORqdHRNSuMrSK1WU+2A==
+"@movable/eslint-config-ember@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@movable/eslint-config-ember/-/eslint-config-ember-1.0.1.tgz#3b8c149be8797f01b6a0cf9a674ffd7069fbe11b"
+  integrity sha512-Ej6G73VEDp0i4PFSpYxo8npWygrnmxYdkI/pKL0cOaMUp6MdAd3enemzRFvGArKok2cgkYR3HYrwJwtN09CuHw==
   dependencies:
-    eslint-plugin-ember "^10.2.0"
-    eslint-plugin-qunit "^5.3.0"
+    eslint-plugin-ember "^10.4.2"
+    eslint-plugin-qunit "^6.1.1"
 
 "@movable/eslint-config@^0.6.7":
   version "0.6.10"
@@ -6040,7 +6040,7 @@ eslint-config-prettier@^8.1.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.1.0.tgz#4ef1eaf97afe5176e6a75ddfb57c335121abc5a6"
   integrity sha512-oKMhGv3ihGbCIimCAjqkdzx2Q+jthoqnXSP+d86M9tptwugycmTFdVR4IpLgq2c4SHifbwO90z2fQ8/Aio73yw==
 
-eslint-plugin-ember@^10.0.0, eslint-plugin-ember@^10.2.0:
+eslint-plugin-ember@^10.0.0, eslint-plugin-ember@^10.4.2:
   version "10.5.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-10.5.1.tgz#3ec65cb562b438c64aa28d772606dbb55705e037"
   integrity sha512-6cubCQdsybN2DtuXnlkhqi3SemBk4ktjq2k4vcjFG8QLmrpmiS6sDwIZMM/TLI8f9QwZIjmewhwS4zB/77E47w==
@@ -6085,12 +6085,12 @@ eslint-plugin-prettier@^3.3.1:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-eslint-plugin-qunit@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-qunit/-/eslint-plugin-qunit-5.3.0.tgz#062ae47f3daee5563b9086edfe66f30f4b444f92"
-  integrity sha512-SeN55paT/BkFvNmi+CSnoCymisEJbmDYvPoBbVlRGsL3ara0P6fnGYRxjIhF6cK37CTZf/8vD5lrVxS3mb0LzA==
+eslint-plugin-qunit@^6.1.1:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-qunit/-/eslint-plugin-qunit-6.2.0.tgz#f4efda29da99523e560848d9592c39c0590c308d"
+  integrity sha512-KvPmkIC2MHpfRxs/r8WUeeGkG6y+3qwSi2AZIBtjcM/YG6Z3k0GxW5Hbu3l7X0TDhljVCeBb9Q5puUkHzl83Mw==
   dependencies:
-    eslint-utils "^2.1.0"
+    eslint-utils "^3.0.0"
     requireindex "^1.2.0"
 
 eslint-scope@^4.0.3:
