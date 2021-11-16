@@ -10,7 +10,7 @@ module('Integration | Decorators | inject', function (hooks) {
     this.set('value', '1');
 
     await render(hbs`
-      <ContextProvider @key="key" @value={{value}}>
+      <ContextProvider @key="key" @value={{this.value}}>
         <ConsumeKey />
       </ContextProvider>
     `);
@@ -37,13 +37,13 @@ module('Integration | Decorators | inject', function (hooks) {
     this.set('second', 'b');
 
     await render(hbs`
-      <ContextProvider @key="key" @value={{first}}>
+      <ContextProvider @key="key" @value={{this.first}}>
         <div data-test-first>
           <ConsumeKey />
         </div>
       </ContextProvider>
 
-      <ContextProvider @key="key" @value={{second}}>
+      <ContextProvider @key="key" @value={{this.second}}>
         <div data-test-second>
           <ConsumeKey />
         </div>

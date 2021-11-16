@@ -10,7 +10,7 @@ module('Integration | Helpers | consume-context', function (hooks) {
     this.set('value', '1');
 
     await render(hbs`
-      <ContextProvider @key="key" @value={{value}}>
+      <ContextProvider @key="key" @value={{this.value}}>
         {{consume-context "key"}}
       </ContextProvider>
     `);
@@ -28,8 +28,8 @@ module('Integration | Helpers | consume-context', function (hooks) {
     this.set('value2', 'b');
 
     await render(hbs`
-      <ContextProvider @key="key-1" @value={{value1}}>
-        <ContextProvider @key="key-2" @value={{value2}}>
+      <ContextProvider @key="key-1" @value={{this.value1}}>
+        <ContextProvider @key="key-2" @value={{this.value2}}>
           <div data-test-value-1>
             {{consume-context "key-1"}}
           </div>
@@ -56,13 +56,13 @@ module('Integration | Helpers | consume-context', function (hooks) {
     this.set('second', 'b');
 
     await render(hbs`
-      <ContextProvider @key="key" @value={{first}}>
+      <ContextProvider @key="key" @value={{this.first}}>
         <div data-test-first>
           {{consume-context "key"}}
         </div>
       </ContextProvider>
 
-      <ContextProvider @key="key" @value={{second}}>
+      <ContextProvider @key="key" @value={{this.second}}>
         <div data-test-second>
           {{consume-context "key"}}
         </div>
@@ -84,7 +84,7 @@ module('Integration | Helpers | consume-context', function (hooks) {
     this.set('fallbackValue', fallbackValue);
 
     await render(hbs`
-      {{consume-context "key" fallback=fallbackValue}}
+      {{consume-context "key" fallback=this.fallbackValue}}
     `);
 
     assert
