@@ -1,8 +1,10 @@
 import { getOwner, setOwner } from '@ember/application';
 import { capabilities } from '@ember/component';
+import { isEqual } from '@ember/utils';
 import { assert } from '@ember/debug';
 
 export const LATEST_INSTANCE_MAP = new Map();
+export const LAST_CONTEXT_VALUE = new WeakMap();
 
 export default class ContextComponentManager {
   capabilities = capabilities('3.13', {
@@ -19,6 +21,7 @@ export default class ContextComponentManager {
     const instance = new ComponentClass(getOwner(this), { key, value });
 
     LATEST_INSTANCE_MAP.set(key, instance);
+    LAST_CONTEXT_VALUE.set(instance, key);
 
     return instance;
   }
@@ -26,7 +29,12 @@ export default class ContextComponentManager {
   updateComponent(component, { named: { key, value } }) {
     assert('`key` argument for ContextProvider cannot change', component.key === key);
 
-    component.value = value;
+    const lastValue = LAST_CONTEXT_VALUE.get(component);
+
+    if (!isEqual(lastValue, value)) {
+      LAST_CONTEXT_VALUE.set(component, value);
+      component.value = value;
+    }
   }
 
   destroyComponent(component) {
