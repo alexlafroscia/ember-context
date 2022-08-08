@@ -1,1 +1,1 @@
-export { default } from '@alexlafroscia/ember-context/components/context-provider';
+export { default } from 'ember-context/components/context-provider';
