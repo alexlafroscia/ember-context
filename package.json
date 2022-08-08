@@ -1,5 +1,5 @@
 {
-  "name": "@alexlafroscia/ember-context",
+  "name": "ember-context",
   "version": "1.0.1",
   "description": "Consume values from elsewhere in your Ember application",
   "keywords": [
